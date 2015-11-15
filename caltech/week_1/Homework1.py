@@ -112,7 +112,7 @@ class Perceptron(object):
 
             iteration += 1
             if len(miss)==0: # stop criteria
-                print ('iterations: %s' % iteration)
+               # print ('iterations: %s' % iteration)
                 learned = True # stop learning
                 return iteration
             else:
@@ -133,14 +133,14 @@ iteration_sum = 0
 
 #print(p.w)
 for x in range(1000):
-    trainset = generateData(10) # train set generation
+    trainset = generateData(100) # train set generation
     p = Perceptron() # use a short
-    print(x)
+    #XSprint(x)
     iteration_sum+=p.train(trainset)
 
 
 print(iteration_sum/1000)
-testset = generateData(10) # test set generation
+testset = generateData(100) # test set generation
 #Perceptron test
 for x in testset:
     r = p.response(x)
